@@ -6,7 +6,7 @@ DATAPATH = os.path.join(PATH, "sneakers.db")
 print(DATAPATH)
 
 def Schema():
-    with sqlite3.connect(DATAPATH) with conn:
+    with sqlite3.connect(DATAPATH) as conn:
         c = conn.cursor()
         table = """CREATE TABLE IF NOT EXISTS sneaker (
                 inv_key INTEGER PRIMARY KEY AUTOINCREMENT,
