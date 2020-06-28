@@ -1,11 +1,6 @@
-from flask import Flask
+from routes.route import app
+from models.list_sneakers import Listings
 
+Listings.dbpath = "/Users/manderson/Documents/Sneaker_Seller/Sneaker_Seller/database/sneakers.db"
 
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Hello World’
-
-if __name__ == '__main__':
-   app.run(debug=True)
+app.run(debug=True)

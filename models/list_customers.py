@@ -1,10 +1,9 @@
 import sqlite3
+from .orm import ORM 
 
+class Customers(ORM):
 
-class Customers(Listings):
-
-    def __init__(self, full_name, phone, email):       
-        Listings.__init__(self,inv_key,name, year_released,version_num,creator,orig_price,curr_price,manufacturer)
-            self.name = name
-            self.phone = phone
-            self.email = email
+    def __init__(self,phone, email, full_name, address):       
+        super().__init__(self, phone, email)
+        self.full_name = full_name
+        self.address = address
