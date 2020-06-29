@@ -21,7 +21,18 @@ def schema():
                 email VARCHAR,
                 creator VARCHAR)"""
 
+
+        sql2 = """CREATE TABLE IF NOT EXISTS customer (
+                cust_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                full_name VARCHAR,
+                address VARCHAR,
+                phone VARCHAR,
+                email VARCHAR,
+                )"""
+
+
         cursor.execute(sql)
+        cursor.execute(sql2)
 
 
 if __name__ == "__main__":

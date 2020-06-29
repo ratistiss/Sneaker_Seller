@@ -3,7 +3,7 @@ from .orm import ORM
 
 class Customers(ORM):
 
-    def __init__(self,phone, email, full_name, address):       
+    def __init__(self, cust_id,phone, email, full_name, address):       
         super().__init__(self, phone, email)
         self.full_name = full_name
         self.address = address

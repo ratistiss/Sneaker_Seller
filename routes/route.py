@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from models.list_sneakers import Listings
+from models.sneakers import Listings
 
 
 app = Flask(__name__)
