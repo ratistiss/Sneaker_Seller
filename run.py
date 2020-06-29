@@ -1,6 +1,6 @@
 from routes.route import app
 from models.sneakers import Listings
 
-Listings.dbpath = "data/sneakers.db"
+Listings.dbpath = "database/sneakers.db"
 
 app.run(debug=True)
