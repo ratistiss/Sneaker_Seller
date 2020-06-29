@@ -35,10 +35,10 @@ def update_item():
 
 @app.route("/delete", methods=["POST"])
 def delete_item():
-    pk = request.get_json().get("inv_key")
-    if pk is None:
+    key = request.get_json().get("inv_key")
+    if key is None:
         return jsonify({"success": False})
-    success = Listings.delete(pk)
+    success = Listings.delete(key)
     return jsonify({"success": success})
 
 @app.route("/sort/phone", methods=["POST"])
