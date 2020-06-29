@@ -36,8 +36,12 @@ class Listings(ORM):
         with sqlite3.connect(self.dbpath) as conn:
             c = conn.cursor()
             row = f"""UPDATE {self.tablename} SET 
-                sneaker_name=? WHERE inv_key=?;"""
-            values = (self.sneaker_name, self.inv_key)
+                sneaker_name=?,year_released=?,version_num=?,
+                orig_price=?,curr_price=?,manufacturer=?,phone=?,
+                email=?,creator=? WHERE inv_key=?;"""
+            values = (self.sneaker_name, self.year_released, self.version_num,
+                    self.orig_price, self.curr_price, self.manufacturer, self.phone,
+                    self.email,self.creator, self.inv_key)
             c.execute(row, values)
             return True
         return False
