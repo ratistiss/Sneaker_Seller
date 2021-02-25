@@ -1,2 +1,2 @@
 # Sneaker_Seller
-An Online Sneaker reseller
+<p>An Online Sneaker reseller, built in Python</p>
